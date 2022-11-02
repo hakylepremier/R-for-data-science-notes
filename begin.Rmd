@@ -63,5 +63,18 @@ overplotting. This arrangement makes it hard to see where the mass of the data i
 - coord_quickmap() sets the aspect ratio correctly for maps.
 - you can make a circular coordinate for barcharts using coord_polar()
 
+**Grammar of Graphics**
+The seven parameters in the template compose the grammar of graphics, a formal system for building plots. \
+`ggplot(data = <DATA>) +`\
+\ \ `<GEOM_FUNCTION>(`\
+\ \ \ \ ` mapping = aes(<MAPPINGS>),`\
+\ \ \ \ ` stat = <STAT>,`\
+\ \ \ \ ` position = <POSITION>`\
+\ \ `) +`\
+\ \ `<COORDINATE_FUNCTION> +`\
+\ \ `<FACET_FUNCTION>`
+
+
+
 
 
