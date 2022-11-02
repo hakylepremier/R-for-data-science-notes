@@ -1,0 +1,63 @@
+---
+title: "Beginning"
+author: "Haky"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+mpg dataset variables: \
+
+- manufacturer - manufacturer name
+- model - model name
+- displ - engine displacement, in litres
+- year - year of manufacture
+- cyl - number of cylinders
+- trans - type of transmission
+- drv - the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+- cty - city miles per gallon
+- hwy - highway miles per gallon
+- fl - fuel type
+- class - "type" of car
+
+\
+**Template for graphing:** \
+`ggplot(data = <DATA>) +`\
+\ \ \ `  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))`
+\
+
+- An aesthetic is a visual property of the objects in your plot.
+- A geom is the geometrical object that a plot uses to represent data.
+
+\
+
+**Statistical Transformations**
+
+- The algorithm used to calculate new values for a graph is called a stat, short for statistical transformation.
+- You can generally use geoms and stats interchangeably. For example, you can re-create a plot using stat_count() instead of geom_bar() since the default geom for count is bar and the default stat for bar is count.
+
+There are three reasons you might need to use a stat explicitly:
+
+- You might want to override the default stat.
+- You might want to override the default mapping from transformed variables to aesthetics.
+- You might want to draw greater attention to the statistical transformation in your code.
+\
+**Position Adjustment**
+
+- You can color a bar chart using either the color aesthetic, or more usefully, fill
+- If you map the fill aesthetic to another variable the bars are automatically stacked. 
+
+Don't want a stacked bar chart, you can use one of three other options: "identity", "dodge"
+or "fill":
+
+- position = "identity" will place each object exactly where it falls in the context of the graph. This is not very useful for bars, because *it overlaps them*.
+-  position = "fill" works like stacking, but makes each set of stacked bars the same height. This makes it easier to compare proportions across groups:
+- position = "dodge" places overlapping objects directly beside
+one another. This makes it easier to compare individual values:
+
+There’s one other type of adjustment that’s not useful for bar charts, but it can be very useful for scatterplots. In normal scatter plots many points overlap each other. This problem is known as
+overplotting. This arrangement makes it hard to see where the mass of the data is. You can avoid this gridding by setting the position adjustment to “jitter.” position = "jitter" adds a small amount of random noise to each point. This spreads the points out because no two points are likely to receive the same amount of random noise.
+
+
+
+
+
