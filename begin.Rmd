@@ -57,7 +57,11 @@ one another. This makes it easier to compare individual values:
 There’s one other type of adjustment that’s not useful for bar charts, but it can be very useful for scatterplots. In normal scatter plots many points overlap each other. This problem is known as
 overplotting. This arrangement makes it hard to see where the mass of the data is. You can avoid this gridding by setting the position adjustment to “jitter.” position = "jitter" adds a small amount of random noise to each point. This spreads the points out because no two points are likely to receive the same amount of random noise.
 
+**Coordinate System**
 
+- You can flip a coordinate system to its side even after setting it with coord_flip()
+- coord_quickmap() sets the aspect ratio correctly for maps.
+- you can make a circular coordinate for barcharts using coord_polar()
 
 
 
